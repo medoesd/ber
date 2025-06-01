@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wing Bun - Epic Wings & Legendary Burgers!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">The Wing Bun</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="order.html" class="btn btn-primary">Order Online</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>CRAVE IT. GET IT. THE WING BUN.</h1>
+            <p>Epic Wings. Legendary Burgers. Sides that Slay. Your tastebuds will thank you.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-secondary">View Full Menu</a>
+                <a href="order.html" class="btn btn-primary">Order Online Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-items container">
+        <h2>🔥 Hot Right Now - Fan Favorites! 🔥</h2>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="images/korean-wings.jpg" alt="Korean Gochujang Wings">
+                <h3>Korean Gochujang Wings</h3>
+                <p>Sweet, spicy, and seriously addictive. Choose bone-in or boneless.</p>
+                <p class="price">From $7.99</p>
+                <a href="menu.html#wings" class="btn btn-tertiary">Get Your Wings</a>
+            </div>
+            <div class="item-card">
+                <img src="images/classic-burger.jpg" alt="The Wing Bun Classic Burger">
+                <h3>The Wing Bun Classic</h3>
+                <p>Our signature Angus beef patty, all the fixin's, and that secret house sauce.</p>
+                <p class="price">$10.99 (with fries!)</p>
+                <a href="menu.html#burgers" class="btn btn-tertiary">Bite Into This</a>
+            </div>
+            <div class="item-card">
+                <img src="images/loaded-fries.jpg" alt="Loaded Cheese Fries">
+                <h3>Loaded Cheese Fries</h3>
+                <p>Crispy fries smothered in melty cheese, bacon bits, and a dollop of awesome.</p>
+                <p class="price">$5.99</p>
+                <a href="menu.html#sides" class="btn btn-tertiary">Load Me Up</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us container">
+        <h2>Why The Wing Bun Rocks Your World</h2>
+        <div class="reasons-grid">
+            <div class="reason">
+                <h4>Bold Flavors</h4>
+                <p>Our sauces are legendary, from tangy Buffalo to fiery Mango Habanero.</p>
+            </div>
+            <div class="reason">
+                <h4>Fresh & Fabulous</h4>
+                <p>We source quality ingredients because great food starts with great stuff.</p>
+            </div>
+            <div class="reason">
+                <h4>Good Times Guaranteed</h4>
+                <p>Perfect for game day, late nights, or any time you need a flavor kick!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready for a Flavor Explosion? 🚀</h2>
+            <a href="order.html" class="btn btn-primary btn-large">Order Your Feast Now!</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <a href="index.html" class="logo">The Wing Bun</a>
+                <p>Your Go-To for Wings & Buns!</p>
+                </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>123 Wing Street, Flavor Town, USA</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@thewingbun.com</p>
+                <p>Mon-Sat: 11 AM - 10 PM | Sun: 12 PM - 9 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> The Wing Bun. All Rights Reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

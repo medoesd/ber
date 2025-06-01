@@ -1,0 +1,333 @@
+/* Basic Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Example font - use web fonts */
+    line-height: 1.6;
+    color: #333333; /* Dark Grey */
+    background-color: #F5F5DC; /* Creamy Off-White */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background: #ffffff; /* White background for header */
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Oswald', sans-serif; /* Example Heading Font */
+    font-size: 1.8rem;
+    color: #D21404; /* Rich Red */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: #FF8C00; /* Deep Orange */
+    border-bottom: 2px solid #FF8C00;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #FF8C00; /* Deep Orange */
+    color: #fff;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #e07b00; /* Darker Orange */
+}
+
+.btn-secondary {
+    background-color: #D21404; /* Rich Red */
+    color: #fff;
+    border: none;
+}
+.btn-secondary:hover {
+    background-color: #b01003; /* Darker Red */
+}
+
+.btn-tertiary {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+}
+.btn-tertiary:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-background.jpg') no-repeat center center/cover; /* Add your hero image */
+    height: 70vh; /* Adjust as needed */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* For overlay if needed */
+}
+.hero::before { /* Optional overlay for better text readability */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative; /* To be above overlay */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem; /* Responsive sizing needed */
+    margin-bottom: 1rem;
+    color: #FFD700; /* Bold Yellow for headline */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* Featured Items Section */
+.featured-items, .why-us, .menu-page {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.featured-items h2, .why-us h2, .menu-page h1, .menu-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #D21404; /* Rich Red */
+}
+.menu-page .menu-intro {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+
+.items-grid, .reasons-grid, .menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    text-align: left;
+}
+.menu-items-grid-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.item-card, .reason, .menu-item-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.item-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.item-card h3, .reason h4, .menu-item-card h4, .menu-item-detailed h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.item-card p, .reason p, .menu-item-card p, .menu-item-detailed .description {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Pushes button to bottom if card is flex container */
+}
+.item-card .price, .menu-item-card .price, .menu-item-detailed .price {
+    font-weight: bold;
+    color: #FF8C00; /* Deep Orange */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.menu-item-detailed {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex; /* For image and text side-by-side */
+    gap: 15px;
+    align-items: center;
+}
+.menu-item-detailed img {
+    width: 120px; /* Adjust as needed */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* CTA Banner */
+.cta-banner {
+    background-color: #D21404; /* Rich Red */
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+.cta-banner h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #333333; /* Dark Grey */
+    color: #f4f4f4;
+    padding-top: 30px;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.footer-col h4 {
+    font-family: 'Oswald', sans-serif;
+    color: #FFD700; /* Bold Yellow */
+    margin-bottom: 15px;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.8;
+}
+.footer-col ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-col .logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: #FF8C00; /* Deep Orange */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    background: #222;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Menu Page Specific */
+.menu-section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.menu-section:last-child {
+    border-bottom: none;
+}
+.menu-section h2 {
+    text-align: left;
+    border-bottom: 2px solid #FF8C00;
+    padding-bottom: 10px;
+    display: inline-block; /* To make border only under text */
+}
+.menu-section p {
+    text-align: left;
+    margin: 10px 0 20px;
+}
+.sauce-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.sauce-list li {
+    display: inline;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* Placeholder for images - create an 'images' folder in your project */
+/* Example: images/hero-background.jpg, images/korean-wings.jpg etc. */
